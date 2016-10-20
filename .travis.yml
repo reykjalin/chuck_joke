@@ -1,10 +1,14 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+deploy:
+  provider: heroku
+  api_key:
+    secure: PemmCySo0UZinTQOX7is2tElMDfOS/Ifnv33uISfkPWz+74muugr6dVzWzSRbOdkZrFwEc517qX2kMB73pdULb0cE8HZcs41kbv8e2H5xNdFehvl1iiHsHQS78tkRH7ttP28L8f2s/PAMAth0M1/kKDHgS/G3DzJDIeQKyr2ypLqCJtAIWuqxsJ+PbSECBtbd8Lea5J03Lb6JfIvMUnIBB7yeEJSreOVnQRy355E0XuvaFvEI1/cEaemCJYT2UA5bO6CQVQxUNkrDF0p0k9mjbl503+hWenc6pZM2G8wjbvTSr1wmcD8Kx74BJPF4YIanhNJCCvUerE+7nLxzD213vl7yjAGe2KRzxb+PpKVsmqzx7r1n9Uel1FcvLHV+nHnUhbksZ4uhr1JDKcbBIpJQmFzHiaaGpCtxn7TxzkiH0udtg6DmMICAB0/GWQDdNfSUABwB3rNDHlHFPHj59f2b5/eoq55tomFlVSWuFskT6v80h17nVPB3v/4AeUXDFrl+nENSvcJkuz/oXsKQyyS7ElCfMWkgVkPNjAg6q+1MnH2+w9KeiVCKzcWflmXpWcZRNJhmaCIP71Is8/5lvu9QEbCXcJL/no5pHbXNLB3M/Y5pw7/CA2YIq6RJMpfI1uEVtQcraiRkQANFSNZjtUgx6bp4U5aIoqdnwOth3Ci+u0=
